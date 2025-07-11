@@ -115,8 +115,6 @@ class AddressUseCaseTest {
     void whenUpdateWithoutAddressThenThrowException() {
         var address = AddressMock.create();
         var customer = CustomerMock.create();
-        var customerWithUpdatedAddress = CustomerMock.create();
-        customerWithUpdatedAddress.updateAddress(address);
 
         when(customerUseCase.searchById(ID)).thenReturn(customer);
 
